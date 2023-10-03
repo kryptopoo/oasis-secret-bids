@@ -130,3 +130,4 @@ dist
 .pnp.*
 /api/package-lock.json
 /contracts/package-lock.json
+/app/package-lock.json
