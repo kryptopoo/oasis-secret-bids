@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "secret-bids",
+  "private_key_id": "a247980f65c5c338547e96517ac7399ebc60c85e",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCk4y+XCw11j1uL\nvV6eHxdGe9tQiRuB7zVtpjtUGqV1yrDNDpsC/bMpM2SWXye+deIWz77SM6bzyJDG\nQUGiGr8390eouGbbXIXanq/m6/9DvtM8UdPFvqmOMNVlJo9nnWTuNfJjVNEwE84o\nNAG67BJ9fpm5TVZM2ogZL5A5BpU4911JETQtShajcoPQotINJ0ckcRs7TEzJUh0C\noEZAuioP6UI6x9PLFVJHMlXtPrYvRhyeYznCns2U14K5DVE7leIiYG2hfwrAWNeB\n2HnGWvwbDozVuHRZKpnWixKqo2eJT/B6Wc6QR/LUmQPoX1NEPwsSeYE3wNIfHD4X\nQX65SK6nAgMBAAECggEAPxdQ694GSd/POxJ8JEuoN8eHnPLBbD/P9UNAe0dw3Tfv\n256FkKjrh03LZMBHMFjh6DGYhczOyoQJZVqt1u2eEjeTm0rnzHLEIulKTDUr6MuY\n/wEeY5E3RpmH5ZrSD2cJqh5JP1nCaz+AyCBSMyhGUO+CuYUOivypS93HtRJAQdnD\nB5H2wHAITveDfa9zl5hTtSQV8vfWQR0Cmniu3YDBkIoISBBxgyYpJKEzwz64S9yu\nTxQ92zMBz06joeF8H3Paui+aqNCqaEePiX6UpvUwfCXQmaWN6btRE/8+SIpH19gh\nL2qKqQPgy3R5vaHnbtRnQR4wHzOsdeciBY193son+QKBgQDeVMLspbyktDVoZrSt\nvT7a5bHMBBAcd3+er4wqklMoSulX3793iih9h0OyUtcSCxg+v+2WgGpA5ZS8VyPO\nIMaR3v85/GQDtTU391KRNnbZAbh3FrT2cgfrsPebNBSxIpVfOghiKhbCjISyY/g+\nXud/akpWZz4t7gM2d3YUFbnpiQKBgQC923kYxj3a5AvukdzGHtsKiZHFt/BsEm7v\ndptyhSr+eBX7x+1eHFR+MRkOvVGpSnJqsOrv4tyoOYImyzbedV3q+gA3CPrL0rNJ\nsfAahKxgn6znH4VFI6VDMQWaVAfhqN3UAYBRDKFarNZLCJWPuvt+BeAwmAHE+Kms\nYvh9MME6rwKBgHoPduSNKUATX67tlAw+dZ+fszkake3O/VWVcxJ8OwNH/UutH2T1\niL1B4bypFkJlrO3mWP3jinIOmNW90X59KAc1slGXayFN/uW29rGagS0qcKeQ49DZ\nUdfn1Eh1E1cccX1SUv/xs4UjuEZn9AXp/JZLOHyvOcflgAYLF9x3ARZhAoGBALcf\n82z3AgCYx/2ECau7ZVGDoexQ4ACNwx0MjSFn2zF5yNKDY6vLrZ/OYbn618JvgW7x\nWJqremR0m9opVrI6CK22F/D9o1Jn1/D0RYB+ifnk6hRALf6jRCtMJHhYJwX9KIHu\nNMN4aEYawdO74u6wzxUeO8EDTWmc46PYDpBKL4cXAoGAdlAWR3bf9pS7KOeqY4f+\nid0thX4e+9dG2sL1MKgZPhn7frxqhtV2n2kJolUxkYYpN+6qJHQLk6TzQ8WIWqqz\n9vKiTz80IlTAQyRN5gxBitFTYMRqDa7nuVyyKb363hy9SEJPBcL2ki7v3xY0KshT\nfGUgEri8KVkAogRHtw+D/U4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "secret-bids-sa@secret-bids.iam.gserviceaccount.com",
+  "client_id": "118301845602167830362",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/secret-bids-sa%40secret-bids.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
