@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { Link } from 'svelte-routing'
   import { NETWORK } from '../common/Constants'
   import { toETH } from '../common/Utils'
   import type { Auction } from '../models/Auction'
@@ -13,7 +14,7 @@
   const tags = auctionService.getTags(auction)
 </script>
 
-<a href={`/auction/${auctionUuid}`}>
+<Link to={`/auction/${auctionUuid}`} style="text-decoration: none">
   <article>
     <img src={auction.tokenMetadata.image} alt="" style="width: 100%;" />
 
@@ -40,7 +41,7 @@
       </div>
     </div>
   </article>
-</a>
+</Link>
 
 <style>
   article {
@@ -49,13 +50,6 @@
     border-radius: 1rem;
     position: relative;
     /* color: var(--color) !important; */
-  }
-
-  a,
-  a:hover,
-  a:focus {
-    /* color: var(--color) !important; */
-    text-decoration: none;
   }
 
   article:hover {

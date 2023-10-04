@@ -39,7 +39,6 @@ const getNftContract = (networkId, address) => {
 
 const db = require('../db/firestore')
 
-
 // detect new auction and sync data
 const syncData = async (networkId) => {
   const blindAuctionContract = getAuctionContract(networkId)
@@ -94,7 +93,7 @@ const fletchContractAuction = async (networkId, auctionId) => {
   return auctionObj
 }
 
-const getAuctions = async (state) => {
+const getAuctions = async () => {
   const networkIds = [NETWORK_ID.bsc_testnet, NETWORK_ID.polygon_mumbai, NETWORK_ID.eth_goerli]
   for (let index = 0; index < networkIds.length; index++) {
     const networkId = networkIds[index]
@@ -102,26 +101,8 @@ const getAuctions = async (state) => {
   }
 
   const auctions = await db.getAllAuctions()
-  const now = Math.floor(Date.now() / 1000)
 
-  let rs = []
-  if (state == 'active') {
-    rs = auctions.filter((a) => {
-      return now >= a.startTime && now <= a.endTime && a.closed == false
-    })
-  }
-  if (state == 'upcoming') {
-    rs = auctions.filter((a) => {
-      return now < a.startTime
-    })
-  }
-  if (state == 'ended') {
-    rs = auctions.filter((a) => {
-      return now > a.endTime || a.closed == true
-    })
-  }
-
-  return rs
+  return auctions
 }
 
 const getAuctionById = async (uuid) => {
