@@ -19,23 +19,25 @@ router.get('/', (req, res) => {
 })
 
 router.get('/auctions', async (req, res) => {
-  const state = req.query.state
+  const auctions = await service.getAuctions()
+  const now = Math.floor(Date.now() / 1000)
 
-  let auctions
-  if (state) {
-    auctions = await service.getAuctions(state)
-  } else {
-    const activeAuctions = await service.getAuctions('active')
-    const upcomingAuctions = await service.getAuctions('upcoming')
-    const endedAuctions = await service.getAuctions('ended')
-    auctions = {
-      activeAuctions: activeAuctions,
-      upcomingAuctions: upcomingAuctions,
-      endedAuctions: endedAuctions,
-    }
+  const activeAuctions = auctions.filter((a) => {
+    return now >= a.startTime && now <= a.endTime && a.closed == false
+  })
+  const upcomingAuctions = auctions.filter((a) => {
+    return now < a.startTime
+  })
+  const endedAuctions = auctions.filter((a) => {
+    return now > a.endTime || a.closed == true
+  })
+
+  const rs = {
+    activeAuctions: activeAuctions,
+    upcomingAuctions: upcomingAuctions,
+    endedAuctions: endedAuctions,
   }
-
-  res.send(auctions)
+  res.send(rs)
 })
 
 router.get('/auctions/:id', async (req, res) => {
