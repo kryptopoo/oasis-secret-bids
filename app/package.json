@@ -24,5 +24,8 @@
     "@krowten/svelte-heroicons": "^0.1.0",
     "@picocss/pico": "^1.5.10",
     "ethers": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
