@@ -4,11 +4,13 @@
   import { AccountService } from '../services/AccountService'
   import {
     AUCTION_TYPE,
+    AUCTION_TYPE_ID,
     EVENT_ID,
     NETWORK,
     NETWORK_ID,
     TOKEN_TYPE,
     CONTRACT,
+    TOKEN_TYPE_ID,
   } from '../common/Constants'
 
   export let showBackButton = true
@@ -122,8 +124,8 @@
   <ul role="listbox">
     {#each tokenTypes as tokenType}
       <li>
-        {#if tokenType.id != 'erc721'}
-          <a href={'#'}>{tokenType.name} (Not yet supported)</a>
+        {#if tokenType.id != TOKEN_TYPE_ID.erc721}
+          <a href={'#'}>{tokenType.name} (Not yet support)</a>
         {:else}
           <a
             href={null}
@@ -148,14 +150,18 @@
   <ul role="listbox">
     {#each auctionTypes as type}
       <li>
-        <a
-          href={'#'}
-          on:click={() => {
-            $AuctionStore.typeId = type.id
-            document.getElementById('auction-types-dropdown')?.removeAttribute('open')
-            validateData()
-          }}>{type.name}</a
-        >
+        {#if type.id != AUCTION_TYPE_ID.blind}
+          <a href={'#'}>{type.name} (Not yet support)</a>
+        {:else}
+          <a
+            href={'#'}
+            on:click={() => {
+              $AuctionStore.typeId = type.id
+              document.getElementById('auction-types-dropdown')?.removeAttribute('open')
+              validateData()
+            }}>{type.name}</a
+          >
+        {/if}
       </li>
     {/each}
   </ul>
